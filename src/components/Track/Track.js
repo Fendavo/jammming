@@ -43,6 +43,13 @@ class Track extends React.Component {
 	render() {
 			return (
 				<div className="track" key={this.props.track.id}>
+				    <div className="track-cover-art">
+						if (this.props.track.coverArt === null || this.props.track.coverArt === "") {
+							<img src="./no-image.png" height="48" width="48" alt="Album cover art" />
+						}
+						else
+							<img src={this.props.track.coverArt} height="48" width="48" alt="Album cover art" />
+					</div>
 				
 					<div className="track-information">
 					  <h3>{this.props.track.name}</h3>

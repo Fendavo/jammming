@@ -16,6 +16,11 @@
     color: rgba(265, 265, 265, .5);
 }
 
+.track-cover-art {
+  float:left;
+  padding:2px;
+}
+
 .track-information {
     flex-grow: 1;
     display: flex;
