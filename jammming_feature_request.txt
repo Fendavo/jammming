@@ -1,1 +1,6 @@
 https://docs.google.com/document/d/12Zjn8aDsRfJXAGCiG7eQjYEQvaH5d5XYljUSrkfca3w/edit?usp=sharing
+
+Other issues that I'd like to deal with eventually:
+1. When user clicks "Save to Spotify" there is some indication that it's done, then the Playlist is cleared.
+2. Find out why the first search does not return anything, but the second attempt, using the same search, does as expected
+3. 
