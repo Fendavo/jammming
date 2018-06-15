@@ -8,11 +8,7 @@ class Track extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		
-        this.state = {
-            currentlyPlaying: false,
-        };
-		
+	
 		this.addTrack = this.addTrack.bind(this);
 		this.removeTrack = this.removeTrack.bind(this);
 	}
@@ -33,22 +29,23 @@ class Track extends React.Component {
 	renderAction() {
 		if (this.props.isRemoval) {
 		  return <a className="track-action" 
-					onClick={this.removeTrack}>-</a>
+					onClick={this.removeTrack}> - </a>
 		}
 		
 		return <a 	className="track-action" 
-					onClick={this.addTrack}>+</a>;
+					onClick={this.addTrack}> + </a>;
 	}
 
 	render() {
+		
+		let imageSource = this.props.track.coverArt;
+		if (this.props.track.coverArt.length === 0)
+			imageSource = "./no-image.png";
+			
 			return (
 				<div className="track" key={this.props.track.id}>
 				    <div className="track-cover-art">
-						if (this.props.track.coverArt === null || this.props.track.coverArt === "") {
-							<img src="./no-image.png" height="48" width="48" alt="Album cover art" />
-						}
-						else
-							<img src={this.props.track.coverArt} height="48" width="48" alt="Album cover art" />
+						<img src={imageSource} height="48" width="48" alt="Album cover art" />
 					</div>
 				
 					<div className="track-information">
